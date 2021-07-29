@@ -1,0 +1,24 @@
+#!/bin/sh
+#|-*- mode:lisp -*-|#
+#|
+exec ros -Q -- $0 "$@"
+|#
+;; [2021-07-24 22:13:48]
+(progn ;;init forms
+  (ros:ensure-asdf)
+  #+quicklisp(ql:quickload '() :silent t)
+  )
+
+(defpackage :ros.script.time-to-string.3836119550
+  (:use :cl))
+(in-package :ros.script.time-to-string.3836119550)
+
+(defun time-to-string (hh mm)
+  (format t "(\"~2,'0d:~2,'0d\")" hh mm)) ; => TIME-TO-STRING
+
+(defun main (&rest argv)
+  (declare (ignorable argv))
+  (let ((hh (first argv))
+        (mm (second argv)))
+    (time-to-string hh mm)))
+;;; vim: set ft=lisp lisp:
