@@ -1,8 +1,8 @@
 # trivial-time
+### biofermin2 <twitter:@biofermin2>
 
-# example usage
+this is functions for time.
+## License
+MIT
 
-$ ./time-to-string.ros 12 34
-
-("12:34")
 
